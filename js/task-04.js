@@ -14,18 +14,5 @@ const buttonIncriment = document.querySelector('[data-action="increment"]');
 const buttonDecrement = document.querySelector('[data-action="decrement"]');
 const spamCounter = document.querySelector('#value');
 
-const handleValueClick = (type) => {
-    return function () {
-        if (type === 'inkriment') {
-            ++counterValue;
-        }
-
-        else if (type === 'decriment'){
-            --counterValue;
-        }
-        spamCounter.textContent = counterValue;
-    }
-};
-
-buttonIncriment.addEventListener('click', handleValueClick('inkriment'));
-buttonDecrement.addEventListener('click', handleValueClick('decriment'));
+buttonIncriment.addEventListener('click', () => { ++counterValue; spamCounter.textContent = counterValue;});
+buttonDecrement.addEventListener('click', () => { --counterValue; spamCounter.textContent = counterValue;});
