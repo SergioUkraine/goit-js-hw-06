@@ -14,9 +14,9 @@ inputText.addEventListener('blur', (event) => {
     if (event.currentTarget.value.length >= inputText.getAttribute('data-length')) {
         inputText.classList = 'valid';
     }
-    else if (event.currentTarget.value.length === 0) {
-        inputText.removeAttribute('class');
-    }
+    // else if (event.currentTarget.value.length === 0) {
+    //     inputText.removeAttribute('class');
+    // }
     else {
         inputText.classList = 'invalid';
     }
