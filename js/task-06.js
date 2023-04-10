@@ -14,6 +14,7 @@ inputText.addEventListener('blur', (event) => {
     if (event.currentTarget.value.length >= inputText.getAttribute('data-length')) {
         inputText.classList = 'valid';
     }
+    // Повернення у вихідне положення (за потребою)
     // else if (event.currentTarget.value.length === 0) {
     //     inputText.removeAttribute('class');
     // }
