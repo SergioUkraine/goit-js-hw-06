@@ -22,13 +22,15 @@ const ingredients = [
 ];
 
 const list = document.querySelector('#ingredients');
-let listContainer = [];
 
-ingredients.forEach((item, index) => {
-  listContainer[index] = document.createElement("li");
-  listContainer[index].textContent = item;
-  listContainer[index].classList.add("item");
+let listContainer = ingredients.map((item, index) => {
+  item = document.createElement('li');
+  item.textContent = ingredients[index]; 
+  item.classList.add('item');
+  return item;
 });
+
+console.log(listContainer);
 
 list.append(...listContainer);
 
