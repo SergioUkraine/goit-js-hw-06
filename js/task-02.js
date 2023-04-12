@@ -23,14 +23,12 @@ const ingredients = [
 
 const list = document.querySelector('#ingredients');
 
-let listContainer = ingredients.map((item, index) => {
-  item = document.createElement('li');
-  item.textContent = ingredients[index]; 
-  item.classList.add('item');
-  return item;
+let listContainer = ingredients.map((ingredient) => {
+  const newItems = document.createElement('li');
+  newItems.textContent = ingredient; 
+  newItems.classList.add('item');
+  return newItems;
 });
-
-console.log(listContainer);
 
 list.append(...listContainer);
 
